@@ -6,4 +6,12 @@ users:
     shell: /bin/bash
     sudo: ['ALL=(ALL) NOPASSWD:ALL']
     ssh-authorized-keys:
-      - <public-key>
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCdMxhnYPxKMCCCjIMWM2CNTItVeXxfhJyWQQAd7grgTXE80XBLRgB5NUb7TP2XVkfsg1zTHmoDubDoq5mMeoUwsnKiFNVx+cMXpdBdiZVsaHLvmg2jtICebdls8w0ES0i9C2D5zO4CGYQklKDrnltrhGKLl+N9fmLUGTfdwLHSu7/+aF+eRvXYvlXOtppCsepRc50Kz8/q2OrEspaLCYDs9Vev4KbsY43vMnEW31pXASTtOYloDb40f+M324/jkwN7iKU55FrU4Nnvpt7B4smD+6Thbrb6kmCmJ/SPtkF4BD34GHkA/BkQWvPA4mk0Ge3JYHCPzBd0Z0g83jRbvQ9gxqg/+optVMVuXmbHch0lhXlSFW2YR0KsKHU7u83sH43fgWmM8EH8DJnvKzUnrFOM+okheeVtfwmIRHmDvgtKdiemnfUXYDBZUDM/GyvVioUG94GuMdFqJWZtL8XQ6mxrxvHhGqCZ/IV22pMnUrUPVUF7x9vOdGCJPy6mQ5lzy8IJKL5bRheqFExElQhQh1n7/uthCY9Aho+zvfi9r7PYo9JGKM2J6SbmHlwRiREZX6gAj0oXrEpMU0k8s82Y2BdCTSwbdeU4Vg41KVpRieQEudueCrcgW4I5JbCGEbDB47Tjiqx1ZIYWOgwXIUDuNHbd+35dKrZNWLPG7hEDf4MwDw== maaron.arcalas@gmail.com
+
+packages:
+  - nginx
+  - nmap
+
+runcmd:
+  - systemctl enable nginx
+  - systemctl start nginx
