@@ -170,7 +170,7 @@ resource "aws_vpc_security_group_egress_rule" "web-egress" {
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/key_pair
 resource "aws_key_pair" "local_key" {
   key_name   = "web-key"
-  public_key = file("/Users/aaronarcalas/Library/Mobile Documents/com~apple~CloudDocs/CIT/4000/4640/Week-4/aws-key/aws-wk4-key.pub")
+  public_key = file("~/.ssh/aws-wk4-key.pub")
 
   tags = {
     Name = "${local.project_name}_key"
